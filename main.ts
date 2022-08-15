@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    bluetooth.uartWriteString("Y")
+    bluetooth.uartWriteString("YES!")
 })
 bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Fullstop), function () {
     受信 = bluetooth.uartReadUntil(serial.delimiters(Delimiters.Fullstop))
@@ -46,7 +46,7 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Fullstop), function ()
     }
 })
 input.onButtonPressed(Button.B, function () {
-    bluetooth.uartWriteString("N")
+    bluetooth.uartWriteString("NO!")
 })
 function setLED () {
     scrollbit.clear()
